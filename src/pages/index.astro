@@ -1,29 +1,23 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
-import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
-const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
+    <div class="text-5xl font-bold">I'm Fernando Panduro</div>
     <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
     <div class="py-2">
       <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
+        💼 My technology stack includes Astro, Next.js, React, TypeScript and Tailwind to create highly responsive and attractive interfaces. Also, I am an expert in database management using Prisma, MongoDB and PostgreSQL. My extensive knowledge of JavaScript ensures robust and efficient web applications.
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
+      <a class="btn bg-amber-500 text-white hover:bg-amber-600" href="https://www.linkedin.com/in/fernando-panduro/" target="_blank"> Let's connect!</a>
+      <a href="/cv-Fernando_Panduro.pdf" download class="btn btn-outline ml-5">
+        Download CV
       </a>
     </div>
   </div>
@@ -33,45 +27,68 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Chirey"
+    img="/chirey.jpg"
+    desc="Chirey the car brand that is innovating in design, technology and safety. The brand committed to quality that gives you a 10-year warranty.."
+    url="https://chirey.mx/"
     badge="NEW"
+    stack={['HTML5', 'CSS3', 'Javascript', 'Bootstrap', 'Jquery', 'ThreeJS']}
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="MG Motor"
+    img="/mg.jpg"
+    desc="A brand with British heritage, the latest in technology and the backing of one of the most important car manufacturers on the planet: SAIC Motor."
+    url="https://www.mgmotor.com.mx/"
+    stack={['HTML5', 'CSS3', 'Javascript', 'Bootstrap', 'JQuery']}
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
+    title="Tarjetly"
+    img="/tarjetly.jpg"
+    desc="Digital business cards designed to help you grow your business network."
+    url="https://tarjetly.com/"
+    stack={['ReactJS', 'CSS3', 'Javascript', 'Bootstrap', 'Vite']}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Kia"
+    img="/kia.jpg"
+    desc="Car brand, with the latest in technology. It is a manufacturer of quality vehicles for young at heart customers."
+    url="https://www.kia.com/mx/main.html"
+    stack={['HTML5', 'CSS3', 'Javascript', 'TailwindCSS', 'JQuery']}
   />
 
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest projects with AI</div>
   </div>
 
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + post.slug}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+  <HorizontalCard
+    title="Youtube Script AI"
+    img="/youtubeai.jpg"
+    desc="Boost your success on YouTube with high-quality metadata thanks to our artificial intelligence. Save time and effortlessly attract your audience in each video."
+    url="https://youtube-ai-script.vercel.app/"
+    badge="NEW"
+    stack={['NextJS', 'ReactJS', 'TypeScript', 'TailwindCSS']}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Temach AI"
+    img="/ai.jpg"
+    desc="Artificial intelligence-powered chat bot to help you find love"
+    url="https://temachia.ferpanduro.com/"
+    badge="NEW"
+    stack={['NextJS', 'ReactJS', 'TypeScript', 'TailwindCSS', 'Prisma']}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Shirt AI"
+    img="/shirt.jpg"
+    desc="Create your unique and exclusive shirt with our brand-new 3D customization tool. Unleash your imagination and define your own style."
+    url="https://threejs-product-shirt.netlify.app/"
+    stack={['Vite', 'ReactJS', 'TypeScript', 'TailwindCSS', 'ThreeJS']}
+  />
+  <div class="divider my-0"></div>
+
+
 </BaseLayout>
