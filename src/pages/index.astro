@@ -23,9 +23,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-2">My 3D projects</div>
+  </div>
+  
+  <HorizontalCard
+    title="3D Island"
+    img="/3D_island.png"
+    desc="3D Island created with ReactJS and ThreeJS"
+    url="https://world.ferpanduro.com/"
+    badge="NEW"
+    stack={['ReactJS', 'TailwindCSS','ThreeJs', 'Vite']}
+  />
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">My last projects {"</>"}</div>
   </div>
 
+  <HorizontalCard
+    title="Courses"
+    img="/courses.jpg"
+    desc="Platform of courses in programming, engineering, art..."
+    url="https://courses-next-ten.vercel.app/"
+    badge="NEW"
+    stack={['NextJS', 'ReactJS', 'TypeScript', 'TailwindCSS','MySQL', 'Stripe', 'Mux', 'Prisma']}
+  />
+  <div class="divider my-0"></div>
   <HorizontalCard
     title="Chirey"
     img="/chirey.jpg"
@@ -77,7 +99,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     img="/ai.jpg"
     desc="Artificial intelligence-powered chat bot to help you find love"
     url="https://temachia.ferpanduro.com/"
-    badge="NEW"
     stack={['NextJS', 'ReactJS', 'TypeScript', 'TailwindCSS', 'Prisma']}
   />
   <div class="divider my-0"></div>
