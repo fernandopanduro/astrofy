@@ -1,0 +1,132 @@
+---
+import HorizontalCard from "../../components/HorizontalCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hola 👋</div>
+    <div class="text-5xl font-bold">Soy Fernando Panduro</div>
+    <div class="text-3xl py-3 font-bold">Ingeniero informático y empresario</div>
+    <div class="py-2">
+      <text class="text-lg">
+        💼 Mi stack tecnológico incluye Astro, Next.js, React, TypeScript y Tailwind para crear interfaces altamente responsivas y atractivas. Además, soy experto en gestión de bases de datos utilizando Prisma, MongoDB y PostgreSQL. Mi amplio conocimiento de JavaScript asegura aplicaciones web robustas y eficientes.
+      </text>
+    </div>
+    <div class="mt-8">
+      <a class="btn bg-amber-500 text-white hover:bg-amber-600" href="https://www.linkedin.com/in/fernando-panduro/" target="_blank"> Conectémonos.</a>
+      <a href="/CV-Fernando-Spanish.pdf" download class="btn btn-outline ml-5">
+        Descargar el CV
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Mis últimos proyectos {"</>"}</div>
+  </div>
+
+
+  <HorizontalCard
+    title="Chirey México"
+    img="/chirey.jpg"
+    desc="Chirey la marca de coches que innova en diseño, tecnología y seguridad. La marca comprometida con la calidad que te da 10 años de garantía.."
+    url="https://chirey.mx/"
+    badge="NEW"
+    stack={['HTML5', 'CSS3', 'Javascript', 'Bootstrap', 'Jquery', 'ThreeJS']}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="MG Motor México"
+    img="/mg.jpg"
+    desc="Una marca con herencia británica, lo último en tecnología y el respaldo de uno de los fabricantes de automóviles más importantes del planeta: SAIC Motor."
+    url="https://www.mgmotor.com.mx/"
+    stack={['HTML5', 'CSS3', 'Javascript', 'Bootstrap', 'JQuery']}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Tarjetly"
+    img="/tarjetly.jpg"
+    desc="Tarjetas de visita digitales diseñadas para ayudarle a ampliar su red empresarial."
+    url="https://tarjetly.com/"
+    stack={['ReactJS', 'CSS3', 'Javascript', 'Bootstrap', 'Vite']}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Kia México"
+    img="/kia.jpg"
+    desc="Marca de automóviles, con lo último en tecnología. Es un fabricante de vehículos de calidad para clientes jóvenes de corazón."
+    url="https://www.kia.com/mx/main.html"
+    stack={['HTML5', 'CSS3', 'Javascript', 'TailwindCSS', 'JQuery']}
+  />
+  <div class="divider my-0"></div>
+    <HorizontalCard
+    title="Plataforma de Cursos"
+    img="/courses.jpg"
+    desc="Plataforma de cursos de programación, ingeniería, arte..."
+    url="https://courses-next-ten.vercel.app/"
+    stack={['NextJS', 'ReactJS', 'TypeScript', 'TailwindCSS','MySQL', 'Stripe', 'Mux', 'Prisma']}
+  />
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Proyectos 3D 🪐</div>
+  </div>
+  
+  <HorizontalCard
+    title="MG Experiencia Virtual"
+    img="/MG_VE.png"
+    desc="Experiencia virtual MG Motors México. Vea los vehículos en 360 grados, por dentro y por fuera."
+    url="https://mg-virtuale.azurewebsites.net/"
+    badge="NEW"
+    stack={['Pug', 'Bootstrap','ThreeJs', 'Javascript', "NodeJS", 'Express']}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Isla 3D"
+    img="/3D_island.png"
+    desc="Portafolio de proyectos de software"
+    url="https://world.ferpanduro.com/"
+    badge="NEW"
+    stack={['ReactJS', 'TailwindCSS','ThreeJs', 'Vite', "NodeJS"]}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Iphone"
+    img="/Iphone.png"
+    desc="Clon de la pagina de Apple para los Iphones."
+    url="https://iphone.ferpanduro.com/"
+    stack={['ReactJS', 'CSS','ThreeJs', 'Vite', "NodeJS"]}
+  />
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Mis últimos proyectos con IA 🤖</div>
+  </div>
+
+  <HorizontalCard
+    title="Youtube Script AI"
+    img="/youtubeai.jpg"
+    desc="Impulsa tu éxito en YouTube con metadatos de alta calidad gracias a nuestra inteligencia artificial. Ahorra tiempo y atrae sin esfuerzo a tu audiencia en cada vídeo."
+    url="https://youtube-ai-script.vercel.app/"
+    badge="NEW"
+    stack={['NextJS', 'ReactJS', 'TypeScript', 'TailwindCSS']}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Temach AI"
+    img="/ai.jpg"
+    desc="Bot de chat con inteligencia artificial para ayudarte a encontrar el amor"
+    url="https://temachia.ferpanduro.com/"
+    stack={['NextJS', 'ReactJS', 'TypeScript', 'TailwindCSS', 'Prisma']}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Shirt AI"
+    img="/shirt.jpg"
+    desc="Crea tu camiseta única y exclusiva con nuestra nueva herramienta de personalización 3D. Da rienda suelta a tu imaginación y define tu propio estilo."
+    url="https://threejs-product-shirt.netlify.app/"
+    stack={['Vite', 'ReactJS', 'TypeScript', 'TailwindCSS', 'ThreeJS']}
+  />
+  <div class="divider my-0"></div>
+
+
+</BaseLayout>
